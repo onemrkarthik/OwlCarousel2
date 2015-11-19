@@ -147,6 +147,7 @@ module.exports = function(grunt) {
 				options: {
 					config: 'src/js/.jscsrc',
 					reporter: 'text.js',
+					verbose: true,
 					reporterOutput: 'jscs.report.txt'
 				},
 				dist: {
@@ -302,7 +303,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('test', [ 'jshint:dist', 'qunit:dist', 'blanket_qunit:dist' ]);
 
-	grunt.registerTask('default', [ 'dist', 'docs', 'test' ]);
+	grunt.registerTask('default', [ 'dist', 'docs' ]);
 
 	grunt.registerTask('serve', [ 'connect:docs', 'watch' ]);
 

@@ -12,15 +12,10 @@
 
 		"scripts": [
 			"src/js/owl.carousel.js",
-			"src/js/owl.autorefresh.js",
-			"src/js/owl.lazyload.js",
-			"src/js/owl.autoheight.js",
-			"src/js/owl.video.js",
 			"src/js/owl.animate.js",
-			"src/js/owl.autoplay.js",
 			"src/js/owl.navigation.js",
-			"src/js/owl.hash.js",
-			"src/js/owl.support.js"
+			"src/js/owl.support.js",
+			"src/js/owl.accessibility.js"
 		]
 	},
 

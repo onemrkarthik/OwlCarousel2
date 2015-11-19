@@ -1269,6 +1269,11 @@
 			return this.nodeType === 1;
 		}).each($.proxy(function(index, item) {
 			item = this.prepare(item);
+			/*
+				ebayPlugin Specific
+				Required to seek to a given index.
+			*/
+			item.attr("data-index", index);
 			this.$stage.append(item);
 			this._items.push(item);
 			this._mergers.push(item.find('[data-merge]').andSelf('[data-merge]').attr('data-merge') * 1 || 1);
@@ -1468,7 +1473,6 @@
 			[ name, 'owl', namespace || 'carousel' ].join('.').toLowerCase(),
 			$.extend({ relatedTarget: this }, status, data)
 		);
-
 		if (!this._supress[name]) {
 			$.each(this._plugins, function(name, plugin) {
 				if (plugin.onTrigger) {
